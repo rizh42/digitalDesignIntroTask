@@ -68,7 +68,8 @@ public class intro1 {
     }
 
     public static void main(String[] args) {
-        String str = "3[xy2[A4[g]]]";
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
         System.out.println(parse(str));
     }
 }

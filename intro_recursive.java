@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.regex.*;
 
-public class intro {
+public class intro_recursive {
 
     public static boolean verify(String str){
         int bracesCount = 0;
@@ -54,7 +54,7 @@ public class intro {
         }
         for (int i = 0; i < str.length(); i++){
             char currChar = str.charAt(i);
-            System.out.println(currChar);
+            //System.out.println(currChar);
             if (Character.isDigit(currChar) && str.charAt(i + 1) == '['){
                 count = allCounts.get(0);
                 allCounts.remove(0);
@@ -85,7 +85,8 @@ public class intro {
     }
 
     public static void main(String[] args) {
-        String str = "3[xy2[A4[g]]]z";
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
         System.out.println(parse(str));
     }
 }
